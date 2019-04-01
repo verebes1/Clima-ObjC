@@ -24,7 +24,7 @@
 //Constants
 NSString *WEATHER_URL = @"https://api.openweathermap.org/data/2.5/weather";
 //?q=leicester&appid=
-NSString *APP_ID = @"";
+NSString *APP_ID = @"";//Your API KEY HERE
 
 
 //TODO: Declare instance variables here
