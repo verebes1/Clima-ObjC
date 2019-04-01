@@ -33,12 +33,11 @@ NSString *APP_ID = @"";//Your API KEY HERE
     [super viewDidLoad];
     
     [self setupLocationManager];
-//    [self getWeatherDataFromURL:WEATHER_URL params:APP_ID];
 }
 
 - (IBAction)changeCityTapped:(UIButton *)sender {
 //    self.cityLabel.text = @"Leicester";
-    [self setupLocationManager];
+//    [self setupLocationManager];
 }
 
 //MARK:- LOCATION MANAGER SETUP
@@ -145,11 +144,20 @@ NSString *APP_ID = @"";//Your API KEY HERE
 /***************************************************************/
 
 //userEnteredANewCityName Delegate method:
-
+//- (void)userEnteredANewCityName:(UIViewController *)controller cityName:(NSString *)city {
+- (void)userEnteredANewCityName:(NSString *)city {
+//    let params: String = "q=\(city)&appid=\(APP_ID)"
+    NSString *params = [NSString stringWithFormat:@"q=%@&appid=%@", city, APP_ID];
+    
+    [self getWeatherDataFromURL:WEATHER_URL params:params];
+}
 
 
 
 //MARK: - Prepare for segue method
-
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    ChangeCityViewController *vc = [segue destinationViewController];
+    vc.delegate = self;
+}
 
 @end

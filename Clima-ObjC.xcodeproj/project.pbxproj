@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4F5F73452250362B009E8351 /* WeatherDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5F73442250362B009E8351 /* WeatherDataModel.m */; };
+		4F82F1E9225276F100C6E3FB /* ChangeCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F82F1E8225276F100C6E3FB /* ChangeCityViewController.m */; };
 		4FC4E6A9224D09E300A53093 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC4E6A8224D09E300A53093 /* AppDelegate.m */; };
 		4FC4E6AC224D09E300A53093 /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC4E6AB224D09E300A53093 /* WeatherViewController.m */; };
 		4FC4E6AF224D09E300A53093 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FC4E6AD224D09E300A53093 /* Main.storyboard */; };
@@ -19,6 +20,8 @@
 /* Begin PBXFileReference section */
 		4F5F73432250362B009E8351 /* WeatherDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherDataModel.h; sourceTree = "<group>"; };
 		4F5F73442250362B009E8351 /* WeatherDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherDataModel.m; sourceTree = "<group>"; };
+		4F82F1E7225276F100C6E3FB /* ChangeCityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChangeCityViewController.h; sourceTree = "<group>"; };
+		4F82F1E8225276F100C6E3FB /* ChangeCityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChangeCityViewController.m; sourceTree = "<group>"; };
 		4FC4E6A4224D09E300A53093 /* Clima-ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Clima-ObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FC4E6A7224D09E300A53093 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4FC4E6A8224D09E300A53093 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -75,6 +78,8 @@
 				4FC4E6A8224D09E300A53093 /* AppDelegate.m */,
 				4FC4E6AA224D09E300A53093 /* WeatherViewController.h */,
 				4FC4E6AB224D09E300A53093 /* WeatherViewController.m */,
+				4F82F1E7225276F100C6E3FB /* ChangeCityViewController.h */,
+				4F82F1E8225276F100C6E3FB /* ChangeCityViewController.m */,
 				4FC4E6AD224D09E300A53093 /* Main.storyboard */,
 				4FC4E6B0224D09E500A53093 /* Assets.xcassets */,
 				4FC4E6B2224D09E500A53093 /* LaunchScreen.storyboard */,
@@ -158,6 +163,7 @@
 				4FC4E6AC224D09E300A53093 /* WeatherViewController.m in Sources */,
 				4FC4E6B7224D09E500A53093 /* main.m in Sources */,
 				4FC4E6A9224D09E300A53093 /* AppDelegate.m in Sources */,
+				4F82F1E9225276F100C6E3FB /* ChangeCityViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

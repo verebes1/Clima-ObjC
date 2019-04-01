@@ -32,6 +32,7 @@
                                 </state>
                                 <connections>
                                     <action selector="changeCityTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z2S-Ds-QQZ"/>
+                                    <segue destination="EK4-Uz-XW7" kind="show" identifier="showChangeCity" id="wxB-B3-KI9"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RPt-2f-AoX" userLabel="Weather Condition Image View">
@@ -50,7 +51,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21°" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="50" translatesAutoresizingMaskIntoConstraints="NO" id="UnM-cp-h3o" userLabel="Temperature Label">
-                                <rect key="frame" x="191" y="179" width="168" height="127"/>
+                                <rect key="frame" x="20" y="179" width="339" height="127"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="168" id="bj7-sq-Cdj"/>
                                     <constraint firstAttribute="height" constant="127" id="zqt-LD-crf"/>
@@ -64,6 +65,7 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KFX-6k-B9W" secondAttribute="bottom" constant="16" id="6fs-g5-OY9"/>
                             <constraint firstItem="JSH-lc-Mrv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="BQg-5F-ixg"/>
+                            <constraint firstItem="UnM-cp-h3o" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="EA8-Wa-kiW"/>
                             <constraint firstItem="RPt-2f-AoX" firstAttribute="top" secondItem="UnM-cp-h3o" secondAttribute="bottom" constant="16" id="Exz-p1-LAS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JSH-lc-Mrv" secondAttribute="trailing" constant="8" id="G2l-UN-IuH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UnM-cp-h3o" secondAttribute="trailing" constant="16" id="H6Z-r1-yds"/>
@@ -87,10 +89,84 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-57" y="60"/>
+        </scene>
+        <!--Change City View Controller-->
+        <scene sceneID="Xwn-fS-AVx">
+            <objects>
+                <viewController id="EK4-Uz-XW7" customClass="ChangeCityViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zbc-us-2Z5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cityBackground" translatesAutoresizingMaskIntoConstraints="NO" id="JL2-PV-Xbi">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqd-IH-w44" userLabel="Back Button">
+                                <rect key="frame" x="16" y="20" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="Ow8-dk-9Wu"/>
+                                    <constraint firstAttribute="height" constant="32" id="clx-fT-hky"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="32" id="pFW-jw-zzt"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="veF-0D-H30"/>
+                                </constraints>
+                                <state key="normal" image="left">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="EK4-Uz-XW7" eventType="touchUpInside" id="8eh-5m-Pgx"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter City Name" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="N2c-sS-l63" userLabel="City Name Text Field">
+                                <rect key="frame" x="93" y="130" width="189" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCY-e3-rKa" userLabel="Get Weather Button">
+                                <rect key="frame" x="12" y="183" width="351" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="wxm-zV-aQn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <state key="normal" title="Get Weather">
+                                    <color key="titleColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="getWeatherTapped:" destination="EK4-Uz-XW7" eventType="touchUpInside" id="0jv-0a-8dV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yqd-IH-w44" firstAttribute="top" secondItem="QJP-2H-ubW" secondAttribute="top" id="1K9-gJ-D16"/>
+                            <constraint firstItem="aCY-e3-rKa" firstAttribute="top" secondItem="N2c-sS-l63" secondAttribute="bottom" constant="23" id="8rc-8F-WEv"/>
+                            <constraint firstItem="N2c-sS-l63" firstAttribute="leading" secondItem="QJP-2H-ubW" secondAttribute="leading" constant="93" id="AIm-MO-vmv"/>
+                            <constraint firstItem="aCY-e3-rKa" firstAttribute="leading" secondItem="QJP-2H-ubW" secondAttribute="leading" constant="12" id="AtA-Ce-7yq"/>
+                            <constraint firstItem="QJP-2H-ubW" firstAttribute="trailing" secondItem="aCY-e3-rKa" secondAttribute="trailing" constant="12" id="PhC-Lb-Vnm"/>
+                            <constraint firstItem="QJP-2H-ubW" firstAttribute="trailing" secondItem="N2c-sS-l63" secondAttribute="trailing" constant="93" id="ShL-yJ-JAB"/>
+                            <constraint firstItem="JL2-PV-Xbi" firstAttribute="leading" secondItem="QJP-2H-ubW" secondAttribute="leading" id="axR-AV-DOb"/>
+                            <constraint firstItem="QJP-2H-ubW" firstAttribute="bottom" secondItem="JL2-PV-Xbi" secondAttribute="bottom" id="jLd-MZ-y5s"/>
+                            <constraint firstItem="N2c-sS-l63" firstAttribute="top" secondItem="QJP-2H-ubW" secondAttribute="top" constant="110" id="l4U-v3-uah"/>
+                            <constraint firstItem="QJP-2H-ubW" firstAttribute="trailing" secondItem="JL2-PV-Xbi" secondAttribute="trailing" id="nUC-Z4-ZQg"/>
+                            <constraint firstItem="yqd-IH-w44" firstAttribute="leading" secondItem="QJP-2H-ubW" secondAttribute="leading" constant="16" id="t5l-F9-qoL"/>
+                            <constraint firstItem="JL2-PV-Xbi" firstAttribute="top" secondItem="Zbc-us-2Z5" secondAttribute="top" id="vYM-Cg-vAP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QJP-2H-ubW"/>
+                    </view>
+                    <connections>
+                        <outlet property="cityNameTextField" destination="N2c-sS-l63" id="JMV-LZ-g4W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mfR-hc-Y0t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="911" y="60"/>
         </scene>
     </scenes>
     <resources>
         <image name="background" width="500" height="755"/>
+        <image name="cityBackground" width="600" height="399.5"/>
+        <image name="left" width="32" height="32"/>
         <image name="switch" width="64" height="64"/>
     </resources>
 </document>

@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import "ChangeCityViewController.h"
 
-@interface WeatherViewController : UIViewController<CLLocationManagerDelegate>
+@interface WeatherViewController : UIViewController<CLLocationManagerDelegate, ChangeCityDelegate>
 - (void)getWeatherDataFromURL:(NSString *)url params:(NSString *)parameters;
 
 @end
